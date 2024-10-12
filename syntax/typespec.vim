@@ -13,7 +13,7 @@ syn match typespecComment "//.*"
 syn region typespecComment start="/\*" end="\*/" keepend
 
 syn match typespecDecorator "@[A-Za-z][A-Za-z0-9_]\+"
-syn match typespecIdentifier "[A-Za-z$][A-Za-z0-9_$]\+"
+syn match typespecIdentifier "[A-Za-z$][A-Za-z0-9_$]*"
 
 syn match typespecInteger "\<\d\+\>"
 syn match typespecFloat "\<\d\+\.\d\>"
