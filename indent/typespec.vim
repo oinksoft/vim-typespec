@@ -10,8 +10,9 @@ function! s:indent(lnum)
 
   let line_contents = getline(line_no)
   let line_start = match(line_contents, '\S')
-  let was_open = match(line_contents, "{") != -1
-  let is_close = match(getline(a:lnum), "}") != -1
+
+  let was_open = match(line_contents, "\\(<[^>]*\\|([^)]*\\|{[^}]*\\)$") != -1
+  let is_close = match(getline(a:lnum), "\\(>[^<]*\\|)[^(]*\\|}[^{]*\\)$") != -1
 
   let shift = 0
   if was_open | let shift += &sw | endif
