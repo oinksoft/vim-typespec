@@ -2,7 +2,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword typespecKeyword import using model namespace op scalar extends interface enum union alias
+syn keyword typespecKeyword import using model namespace op scalar extends interface enum union alias is const
 syn keyword typespecBoolean true false
 
 syn keyword typespecType numeric integer float int64 int32 int16 int8 safeint uint64 uint32 uint8 float32 float64 decimal decimal128
